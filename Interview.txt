@@ -1,0 +1,545 @@
+
+int []a = {2,4,3,5};
+
+ArrayList<Integer> al = a.stream().filter(i->i%2==0).collectors.toCollect();
+
+Optional<> employee = repo.getEmployee().orElse(throws new Exception);
+
+
+what are core principles of oops.
+how do u achieve abstraction.
+what is multithreading.
+what is solid principle.
+annotations in springboot.
+spring vs spring boot.
+why microservices not monolithic for ur project.
+
+
+how do u create restapi
+how do u create repository
+why extending jparepo why not crudrepo.
+occurrence of each character in string.
+
+when to use hashMap and when to use hashSet??
+
+
+Interview questions (Capgemini)
+1. What you did using apache poi
+2. What algorithms you used in your project.
+ (sorting ----a. bubble, b.insertion sort   , searching ----> a. binary search, linear search).
+3. ArrayList vs LinkedList (insertion - (AL)at first position[if elements already available] - worst, LL --- best. Deletion[in middle] ---> LL easy   ) 
+Storing and Accessing is easy in ArrayList.... Data Manipulation is tough in LinkedList. 
+
+4. What are atomic variables. 
+
+
+import java.util.concurrent.atomic.AtomicInteger;
+
+public class AtomicExample {
+    public static void main(String[] args) {
+        AtomicInteger counter = new AtomicInteger(0);
+
+        // Increment the counter atomically
+        System.out.println(counter.incrementAndGet()); // Outputs 1
+
+        // Decrement the counter atomically
+        System.out.println(counter.decrementAndGet()); // Outputs 0
+
+        // Compare and set (CAS operation)
+        if (counter.compareAndSet(0, 5)) {
+            System.out.println("Value updated to 5"); // Outputs this
+        } else {
+            System.out.println("Update failed");
+        }
+
+        System.out.println(counter.get()); // Outputs 5
+    }
+}
+
+Atomic variables are variables that provide a mechanism for lock-free, thread-safe access and modification in multithreaded programming. 
+They are commonly used in scenarios where multiple threads need to access and modify shared data concurrently.
+
+Key Features of Atomic Variables
+Atomicity:
+
+Operations on atomic variables are indivisible; they are completed as a single, uninterruptible step.
+This ensures that no other thread can observe or modify the variable in an intermediate state.
+Thread Safety:
+
+Multiple threads can safely read, write, or modify an atomic variable without explicit synchronization (e.g., locks or mutexes).
+Lock-Free:
+
+Unlike traditional synchronization mechanisms (like synchronized blocks or mutexes), atomic variables use low-level CPU instructions (like compare-and-swap or fetch-and-add) to ensure thread safety without blocking.
+Efficient:
+
+Atomic variables are generally faster than locking mechanisms since they avoid the overhead of acquiring and releasing locks.
+Common Use Cases
+Counters:
+
+Atomic variables are often used for thread-safe counters, e.g., incrementing or decrementing a value shared by multiple threads.
+Flags:
+
+They are used as boolean flags to indicate the state of a resource or process in a thread-safe manner.
+Reference Updates:
+
+Used to update object references atomically in a concurrent environment.
+Examples in Programming
+In Java (java.util.concurrent.atomic)
+The java.util.concurrent.atomic package provides several atomic classes:
+
+AtomicInteger
+AtomicLong
+AtomicBoolean
+AtomicReference
+
+
+
+
+5. What is telescopic constructor (Multiple Constructors with multiple fields....i.e. Telescopic Constructor....issue.... Builder Pattern is solution)
+6. Can we write try catch block in catch block (Yes... Nested Exception)
+7. What is call by reference 
+8. What exceptions a child class can throw, and explain why... 
+
+9. What design patterns you used.
+
+10. When to use builder pattern.
+
+11. How to call the service of other urls(from other services) [restTemplate, webclient, feign client]
+
+12. When to use group_by function
+	
+13. What is aggregate function
+
+14. What is relation / condition for aggregation and group_by function
+
+15. How will simulate StackOverflow error in you app.
+
+16. What is the need of recursion, When to use it?
+Everyone 15, 16 added now
+ 
+
+
+Authentication and authorization in angular app
+What are dynamic components
+How will you create an angular app
+If you get blank page view, how will you debug
+What is change detection
+What are angular forms
+Add a new task to tasks array (name, completed)
+What are interceptors
+What is ngFor used for?
+Angular pipes
+Observables
+How will you test http calls
+Error handling in angular
+
+
+
+how do u start spring boot app in local and angular in local.
+internal implementation of HashMap and HashSet.
+annotations used in ur project.
+if bean A and bean B are there. I want load bean B first and then Bean A. What do u code for this.
+even numbers from array using stream api.
+java 8 feature.
+how do u handle null values using optional class.
+have u used git. then how u push the code. How do u resolve ur conflicts.
+if string = "tree" output should be "eetr" or "eert".
+what is method and constructor referecing and there diffrence.
+List and Set difference.
+hashmap and hashset difference.
+how u achieve lazy loading in springboot?
+
+
+                              Java Fullstack Interview Questions 
+
+ 
+
+Opp’s concept 
+
+Java 8, 11 Features 
+
+What is functional Interface and their types? 
+
+Where we use functional interface? 
+
+Array list vs Vector? 
+
+Array list vs linked list? 
+
+HashMap vs Hashtable? 
+
+HashMap vs concurrent HashMap? 
+
+What is serialization and how we can achieve? 
+
+What is Singleton? 
+
+Can we break singleton and how? 
+
+What is concurrent HashMap? 
+
+HashMap Internal working? 
+
+HashSet working? 
+
+Where we Store the element in HashSet? 
+
+Overloading vs Overriding and their example 
+
+Can we write multiple Exception and how? 
+
+Check exception vs Unchecked Exception 
+
+What is the parent class of Exception? 
+
+Java design pattern 
+
+What are the microservices used in project? 
+
+What is eureka server? 
+
+Api Gateway 
+
+How to handle NullPointerException? (Expected ans – using optional class) 
+
+What is Optional class? 
+
+Of vs of nullable 
+
+Lazy loading vs Egar loading? 
+
+If database fail while doing operation what will do? 
+
+How you can write SQL queries? 
+
+Postfix operator and prefix they given example we have to tell output for the program 
+
+What is lambda Expression? 
+
+How to call one microservices to another? 
+
+RestController vs Controller 
+
+@Autowired vs @Qualifier. 
+
+Bean Scope 
+
+Spring container life cycle 
+
+Bean life cycle 
+
+What is Actuator 
+
+Map vs flat map 
+
+Stream Api 
+
+What is findFirst and findAny  
+
+What is Metaspace? 
+
+Metaspace advantages over Permgen? 
+
+Can we create are own immutable class and how? 
+
+How you can manage the transaction of Spring Boot application? (Expected ans @Transaction and @EnableTransactionManagement) 
+
+How to change Server and port also? 
+
+Can we use multiple database in one application if yes then How we can implement? 
+
+How to know that which database is working? 
+
+What is @profile annotation use and how to achieve it? 
+
+PostMapping vs GetMapping? 
+
+PostMapping vs PutMapping? 
+
+Put vs patch? 
+
+Which annotation used in your project ? 
+
+How to do autoConfiguration in spring boot? 
+
+If I don’t want to AutoConfiguration then how will do that? 
+
+Key Component of SpringBoot? 
+
+How we create non web application in SpringBoot? 
+
+How we can call rest api in front end? 
+
+How to call one component to another? 
+
+Lazy loading vs egar Loading in angular? 
+
+Let vs const vs var? 
+
+Observable vs Promises? 
+
+How we can call the service in components? 
+
+What is router guard? 
+
+What is Routing? 
+
+If one user access the link but another user doesn’t have access then how you can do that? Ans role based authentication 
+
+What angular hooks? 
+
+Angular decorators? 
+
+Angular directives? 
+
+What are the Angular Binding? 
+
+What is String pool? 
+
+Why string is Immutable? 
+
+String vs Stringbuffer vs stringBuilder? 
+
+ 
+
+ 
+
+ 
+
+how do u start spring boot app in local and angular in local. 
+
+internal implementation of HashMap and HashSet. 
+
+annotations used in ur project. 
+
+if bean A and bean B are there. I want load bean B first and then Bean A. What do u code for this. 
+
+even numbers from array using stream api. 
+
+java 8 feature. 
+
+how do u handle null values using optional class. 
+
+have u used git. then how u push the code. How do u resolve ur conflicts. 
+
+if string = "tree" output should be "eetr" or "eert". 
+
+what is method and constructor referecing and there diffrence. 
+
+List and Set difference. 
+
+hashmap and hashset difference. 
+
+how u achieve lazy loading in springboot? 
+
+
+// **********Persistence********* //
+
+what jre jvm 
+what is synchronised lock and reentrant lock
+difference between arraylist and linkedlist
+how many garbage collectors we are having in JVM
+
+what is singleton in beans
+what is prototype in beans
+
+how many entity managers we can have
+what is depencency injection
+what is spring aop
+internal working of hashmap
+what is the benefit of using spring boot
+memories available in jvm and use of each memory
+what is date api and its functions
+what is java 8 feature
+what is the benefit of using method referecing
+
+
+
+
+how do u start spring boot app in local and angular in local.
+internal implementation of HashMap and HashSet.
+annotations used in ur project.
+if bean A and bean B are there. I want load bean B first and then Bean A. What do u code for this.
+even numbers from array using stream api.
+java 8 feature.
+how do u handle null values using optional class.
+have u used git. then how u push the code. How do u resolve ur conflicts.
+if string = "tree" output should be "eetr" or "eert".
+what is method and constructor referecing and there diffrence.
+List and Set difference.
+hashmap and hashset difference.
+how u achieve lazy loading in springboot?
+
+
+what is OOP
+what abstraction
+what is dynamic and static binding
+how do u achieve abstraction in java
+what is springboot
+difference between spring and springboot
+difference between arraylist and hashset
+what is controlleradvice
+what is ioc
+what is aop
+multithreading and executor service
+WAP to remove the duplicate words from sentence.
+
+
+
+Authentication and authorization in angular app
+What are dynamic components
+How will you create an angular app
+If you get blank page view, how will you debug
+What is change detection
+What are angular forms
+Add a new task to tasks array (name, completed)
+What are interceptors
+What is ngFor used for?
+Angular pipes
+Observables
+How will you test http calls
+Error handling in angular
+
+
+Can we write parameterized constructor in abstract class
+Which functional interfaces you have used
+Comparator vs comparable
+SOLID principal
+Future vs CompletebleFuture
+What is spring actuator
+What is AOT
+Angular lifecycle hooks
+What are pipes in angular
+Can we traverse back a singly linked list
+OOPS in detail
+Spring boot advantages
+How to secure microservices
+String memory management
+Find employees whose salary greater than average salary (avg salary not provided)
+
+
+how do u start spring boot app in local and angular in local.
+internal implementation of HashMap and HashSet.
+annotations used in ur project.
+if bean A and bean B are there. I want load bean B first and then Bean A. What do u code for this.
+even numbers from array using stream api.
+java 8 feature.
+how do u handle null values using optional class.
+have u used git. then how u push the code. How do u resolve ur conflicts.
+if string = "tree" output should be "eetr" or "eert".
+what is method and constructor referecing and there diffrence.
+List and Set difference.
+hashmap and hashset difference.
+how u achieve lazy loading in springboot?
+
+
+
+how do u start spring boot app in local and angular in local.
+internal implementation of HashMap and HashSet.
+annotations used in ur project.
+if bean A and bean B are there. I want load bean B first and then Bean A. What do u code for this.
+even numbers from array using stream api.
+java 8 feature.
+how do u handle null values using optional class.
+have u used git. then how u push the code. How do u resolve ur conflicts.
+if string = "tree" output should be "eetr" or "eert".
+what is method and constructor referecing and there diffrence.
+List and Set difference.
+hashmap and hashset difference.
+how u achieve lazy loading in springboot?
+
+
+
+
+
+	List<Integer> list = Arrays.asList(3,7,8,4,2,5);
+
+	List<Integer> list2 = Arrays.asList(3,7,9);
+ 
+	List<List<Integer>> lists = Arrays.asList(Arrays.asList(3,7,8,4,2,5), Arrays.asList(3,7,9));
+	
+	List<Integer> commonElementsList = lists().flatMap(ArrayList::stream).collect(Collectots.groupingBy(e->e, LinkedHas
+
+
+Int 1 step 5 Int 3 number int UKG  -----   
+
+Capgemini ---- 10/01/2025
+
+1.What are the critical problems that u have solved ? *** 
+2.Service A  ---> Service B ---> Service C. Service B is down. Impacting Service A then where to write fallback method.
+3.if class not found exception in try block and having catch exceptions Exception then FileNotFound and then Custom exception extending fileNotFound??which catch will excute.
+4. String str= "Vaishnavi" --- fist non repeating character using java8.
+5. difference between hashtable and hashmap
+6. arraylist size automatically increases and why?
+7.difference between constructor and ngoninit?
+8.how to increase the performance of the angular app.
+9.jwt flow 
+10. how to secure the jwt token at client side
+11. what are the ways to communicate between the microservices
+12. difference between spring and spring boot monolithic and microservices
+13. how to write the custom query in restcontroller
+14. what do we use for repository
+15. difference between crud and jpa repo
+16. finally block termination
+17. ioc container
+18. bean scopes
+19. bean life cycle
+20. List<Integer> list = Arrays.asList(3,7,8,4,2,5);
+
+	List<Integer> list2 = Arrays.asList(3,7,9);  // Output should be list of common elements from the 2 lists. {3,7}.
+21. employee and phone number table from and it query. Checkout for joins.
+22. critical task in current project.
+23. junit test cases.
+24. jasmine and karma test case for addition of two numbers.
+25. java 8 features.
+26. second largest in an array coding
+27. communication between the frontend and backend. detailed explanation with environment
+28. difference between promise and observables
+29. have u used reactive forms
+30. have u used angular material. if yes why and if not why?
+31. difference between comparable and comparator when to use
+32. checking two attributes of a class name and age. Compare it using java 8.
+33. how do u write docker image
+34. apache kafka 
+35. deisgn patterns
+36. what is eureka server
+37. how do u get know if particular service is down in microservice environment.
+38. what is the use of serialization and cloneable
+39. how many ways u can create the objects in java?
+40. what cors and how do u handle it??
+41. difference between raquest param and path variable
+42. Microservices architecture. What API Gateway Design pattern.
+43. what is forkJoinPool??
+
+
+
+
+
+
+List<List<String>> sentences1= Arrays.asList(Arrays.asList("My Name is Mahesh"),
+                Arrays.asList("My Name is Konda"),Arrays.asList("My Name is Awin"));
+
+        System.out.println(list1);
+
+        List<String> list2 = sentences.stream()
+                                      .flatMap(List::stream)
+                                      .map(sentence->sentence.split(" "))
+                                      .flatMap(Arrays::stream)
+                                      .collect(Collectors.groupingBy(e->e,LinkedHashMap::new, Collectors.counting()))
+                                      .entrySet().stream().filter(e->e.getValue()==1).map(Map.Entry::getKey)
+                                      .collect(Collectors.toList());
+        System.out.println(list2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
